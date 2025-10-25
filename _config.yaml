@@ -1,9 +1,9 @@
 # site properties and page defaults
-title: Unbounded AI
-subtitle: Unbounded AI lab
-logo-text: Unbounded AI
-description: Pushing the boundaries of AI by addressing core challenges in privacy, security, scalability, and efficiency.
-header: images/background.jpg
+title: "CENTER for COMPUTATIONAL EVOLUTIONARY INTELLIGENCE"
+subtitle: ""  # 副标题已经集成在主标题中
+logo-text: true
+show-title: true
+show-subtitle: false
 footer: images/background.jpg
 proofer: false
 
