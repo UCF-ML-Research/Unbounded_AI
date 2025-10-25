@@ -2,16 +2,7 @@
 title: Research
 nav:
   order: 1
-  tooltip: Our research areas and projects
-  dropdown:
-    - title: Machine Learning
-      url: /research/machine-learning/
-    - title: Computer Vision
-      url: /research/computer-vision/
-    - title: Natural Language Processing
-      url: /research/nlp/
-    - title: Robotics
-      url: /research/robotics/
+  tooltip: Published works
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
