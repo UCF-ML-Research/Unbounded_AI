@@ -43,22 +43,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Unbounded AI</title>
+<title>CENTER for COMPUTATIONAL EVOLUTIONARY INTELLIGENCE</title>
 
 <link rel="icon" href="/Unbounded_AI/images/icon.png">
 
 <meta name="title" content="">
-<meta name="description" content="Unbounded AI lab. Pushing the boundaries of AI by addressing core challenges in privacy, security, scalability, and efficiency.">
+<meta name="description" content=". ">
 
 <meta property="og:title" content="">
-<meta property="og:site_title" content="Unbounded AI">
-<meta property="og:description" content="Unbounded AI lab. Pushing the boundaries of AI by addressing core challenges in privacy, security, scalability, and efficiency.">
+<meta property="og:site_title" content="CENTER for COMPUTATIONAL EVOLUTIONARY INTELLIGENCE">
+<meta property="og:description" content=". ">
 <meta property="og:url" content="https://ucf-ml-research.github.io/Unbounded_AI">
 <meta property="og:image" content="/Unbounded_AI/images/share.jpg">
 <meta property="og:locale" content="en_US">
 
 <meta property="twitter:title" content="">
-<meta property="twitter:description" content="Unbounded AI lab. Pushing the boundaries of AI by addressing core challenges in privacy, security, scalability, and efficiency.">
+<meta property="twitter:description" content=". ">
 <meta property="twitter:url" content="https://ucf-ml-research.github.io/Unbounded_AI">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/Unbounded_AI/images/share.jpg">
@@ -74,7 +74,7 @@
       "@type": "WebSite",
     
     "name": "",
-    "description": "Unbounded AI lab. Pushing the boundaries of AI by addressing core challenges in privacy, security, scalability, and efficiency.",
+    "description": ". ",
     "headline": "",
     "publisher": {
       "@type": "Organization",
@@ -379,12 +379,17 @@
 
 
 
-<header class="background" style="--image: url('/Unbounded_AI/images/background.jpg')" data-dark="true" data-big>
-  <a href="/Unbounded_AI/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+<header class="header-wrapper" data-dark="true" data-big>
+  <!-- Tier 1: 品牌和全局工具栏 -->
+  <div class="header-tier-1">
+    <div class="header-container">
+      <!-- 左侧：Logo 和网站标题 -->
+      <div class="brand-section">
+        <a href="/Unbounded_AI/" class="home">
+          
+            <span class="logo">
+              
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
   <style>
     .bubble {
       animation: float 2s ease-out both infinite var(--delay);
@@ -442,59 +447,137 @@
     "></path>
 </svg>
 
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="Home">
-        
-          <span class="title">Unbounded AI</span>
-        
-        
-          <span class="subtitle">Unbounded AI lab</span>
-        
-      </span>
-    
-  </a>
-
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
-  <nav>
-    
-    
-      
-        <a href="/Unbounded_AI/research/" data-tooltip="Published works">
-          Research
+              
+            </span>
+          
+          
+          <!-- 分隔线 -->
+          <span class="brand-divider"></span>
+          
+          <!-- 网站标题 -->
+          
+            <span class="title-text">
+              
+                <span class="title-line-1">CENTER</span>
+                <span class="title-line-2">for COMPUTATIONAL</span>
+                <span class="title-line-3">EVOLUTIONARY INTELLIGENCE</span>
+              
+            </span>
+          
         </a>
+      </div>
       
-    
+      <!-- 右侧：搜索框 -->
+      <div class="search-section">
+        <form class="search-form" action="/Unbounded_AI/search" method="get">
+          <input type="search" class="search-input" placeholder="Search..." name="query" aria-label="Search">
+          <button type="submit" class="search-button" aria-label="Submit search">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tier 2: 主导航栏 -->
+  <div class="header-tier-2">
+    <div class="header-container">
+      <!-- 移动端导航切换按钮 -->
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="show/hide nav">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
       
-        <a href="/Unbounded_AI/projects/" data-tooltip="Software, datasets, and more">
-          Projects
-        </a>
-      
-    
-      
-        <a href="/Unbounded_AI/blog/" data-tooltip="Musings and miscellany">
-          Blog
-        </a>
-      
-    
-      
-        <a href="/Unbounded_AI/contact/" data-tooltip="Email, address, and location">
-          Contact
-        </a>
-      
-    
-      
-        <a href="/Unbounded_AI/team/" data-tooltip="About our team">
-          Team
-        </a>
-      
-    
-  </nav>
+      <!-- 主导航 -->
+      <nav class="main-nav">
+        
+        
+          
+            <div class="nav-item has-dropdown">
+              <a href="/Unbounded_AI/research/" data-tooltip="Our research areas and projects" class="nav-link">
+                Research
+                
+                  <i class="fas fa-chevron-down dropdown-icon"></i>
+                
+              </a>
+              
+              <!-- 下拉菜单（如果有的话） -->
+              
+                <div class="dropdown-menu">
+                  
+                    <a href="/Unbounded_AI/research/machine-learning/" class="dropdown-link">
+                      Machine Learning
+                    </a>
+                  
+                    <a href="/Unbounded_AI/research/computer-vision/" class="dropdown-link">
+                      Computer Vision
+                    </a>
+                  
+                    <a href="/Unbounded_AI/research/nlp/" class="dropdown-link">
+                      Natural Language Processing
+                    </a>
+                  
+                    <a href="/Unbounded_AI/research/robotics/" class="dropdown-link">
+                      Robotics
+                    </a>
+                  
+                </div>
+              
+            </div>
+          
+        
+          
+            <div class="nav-item">
+              <a href="/Unbounded_AI/projects/" data-tooltip="Software, datasets, and more" class="nav-link">
+                Projects
+                
+              </a>
+              
+              <!-- 下拉菜单（如果有的话） -->
+              
+            </div>
+          
+        
+          
+            <div class="nav-item">
+              <a href="/Unbounded_AI/blog/" data-tooltip="Musings and miscellany" class="nav-link">
+                Blog
+                
+              </a>
+              
+              <!-- 下拉菜单（如果有的话） -->
+              
+            </div>
+          
+        
+          
+            <div class="nav-item">
+              <a href="/Unbounded_AI/contact/" data-tooltip="Email, address, and location" class="nav-link">
+                Contact
+                
+              </a>
+              
+              <!-- 下拉菜单（如果有的话） -->
+              
+            </div>
+          
+        
+          
+            <div class="nav-item">
+              <a href="/Unbounded_AI/team/" data-tooltip="About our team" class="nav-link">
+                Team
+                
+              </a>
+              
+              <!-- 下拉菜单（如果有的话） -->
+              
+            </div>
+          
+        
+      </nav>
+    </div>
+  </div>
 </header>
-
     <main>
       <!--
   modify main content of page:
@@ -712,7 +795,7 @@
 
   <div>
     © 2025
-    Unbounded AI
+    CENTER for COMPUTATIONAL EVOLUTIONARY INTELLIGENCE
       |   Built with
     <a href="https://github.com/greenelab/lab-website-template">
       Lab Website Template
