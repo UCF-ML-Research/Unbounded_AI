@@ -60,12 +60,12 @@ header a {
   text-align: left;
 }
 
-// 新增：可配置的标题位置
-// 默认在 logo 右侧
-header[data-title-position="right"] .title-text,
-header:not([data-title-position]) .title-text {
-  // 标题在 logo 右侧（默认）
-}
+// // 新增：可配置的标题位置
+// // 默认在 logo 右侧
+// header[data-title-position="right"] .title-text,
+// header:not([data-title-position]) .title-text {
+//   // 标题在 logo 右侧（默认）
+// }
 
 // // 标题在中间
 // header[data-title-position="center"] {
