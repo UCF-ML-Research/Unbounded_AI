@@ -51,9 +51,9 @@ header a {
 
 .title-text {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
+  align-items: flex-start;
   gap: 5px;
   min-width: 0;
   font-family: var(--title);
