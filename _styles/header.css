@@ -19,15 +19,15 @@ header a {
 .home {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  flex-basis: 0;
-  flex-grow: 1;
+  flex-shrink: 0;
   max-width: 100%;
 }
 
 .logo {
   height: 40px;
+  flex-shrink: 0;
 }
 
 .logo > * {
@@ -44,6 +44,46 @@ header a {
   min-width: 0;
   font-family: var(--title);
   text-align: left;
+}
+
+header[data-title-position=center] .home {
+  position: relative;
+  width: 100%;
+}
+header[data-title-position=center] .logo {
+  position: absolute;
+  left: 0;
+}
+header[data-title-position=center] .title-text {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 50px;
+}
+
+header[data-title-position=below] .home {
+  flex-direction: column;
+  align-items: flex-start;
+}
+header[data-title-position=below] .title-text {
+  width: 100%;
+}
+
+header[data-title-position=absolute] .home {
+  position: relative;
+  width: 100%;
+}
+header[data-title-position=absolute] .logo {
+  position: relative;
+  z-index: 2;
+}
+header[data-title-position=absolute] .title-text {
+  position: absolute;
+  top: var(--title-top, 50%);
+  left: var(--title-left, 50%);
+  transform: translate(var(--title-translate-x, -50%), var(--title-translate-y, -50%));
+  z-index: 1;
 }
 
 .title {
@@ -115,6 +155,13 @@ nav > a:hover {
     flex-direction: column;
     width: 100%;
   }
+  header:not([data-big])[data-title-position=center] .title-text, header:not([data-big])[data-title-position=absolute] .title-text {
+    position: static;
+    transform: none;
+    padding-left: 0;
+    justify-content: flex-start;
+    text-align: left;
+  }
 }
 
 header[data-big] {
@@ -124,15 +171,34 @@ header[data-big] {
   padding: 100px 20px;
   top: unset;
 }
-header[data-big] .home {
+header[data-big][data-logo-fixed=true] {
+  position: relative;
+}
+header[data-big][data-logo-fixed=true] .logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+}
+header[data-big][data-logo-fixed=true] .home {
+  flex-direction: column;
+  flex-grow: 0;
+  width: 100%;
+}
+header[data-big][data-logo-fixed=true] .title-text {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header[data-big]:not([data-logo-fixed=true]) .home {
   flex-direction: column;
   flex-grow: 0;
 }
-header[data-big] .logo {
+header[data-big]:not([data-logo-fixed=true]) .logo {
   height: 80px;
   flex-shrink: 0;
 }
-header[data-big] .title-text {
+header[data-big]:not([data-logo-fixed=true]) .title-text {
   flex-direction: column;
   align-items: center;
   text-align: center;
