@@ -164,47 +164,4 @@ nav > a:hover {
   }
 }
 
-header[data-big] {
-  padding: 100px 20px;
-  top: unset;
-}
-header[data-big][data-logo-fixed=true] {
-  position: relative;
-}
-header[data-big][data-logo-fixed=true] .logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  height: 40px;
-}
-header[data-big][data-logo-fixed=true] .home {
-  flex-direction: column;
-  flex-grow: 0;
-  width: 100%;
-}
-header[data-big][data-logo-fixed=true] .title-text {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-header[data-big]:not([data-logo-fixed=true]) .home {
-  flex-direction: column;
-  flex-grow: 0;
-}
-header[data-big]:not([data-logo-fixed=true]) .logo {
-  height: 80px;
-  flex-shrink: 0;
-}
-header[data-big]:not([data-logo-fixed=true]) .title-text {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-header[data-big] .title {
-  font-size: var(--xxl);
-}
-header[data-big] .subtitle {
-  font-size: var(--large);
-}
-
 /*# sourceMappingURL=header.css.map */
