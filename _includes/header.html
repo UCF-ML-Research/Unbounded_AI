@@ -9,7 +9,14 @@
 <header
   class="background"
   style="background-color: #001A57;"
-
+  <!-- style="--image: url('{{ image | relative_url | uri_escape }}')"
+  {% if dark == true or dark == false %}
+    data-dark="{{ dark }}"
+  {% endif %}
+  {% if page.url == "/" %}
+    data-big
+  {% endif %} 
+>-->
   <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
       <span class="logo">
@@ -34,36 +41,19 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav class="main-nav">
+  <nav>
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
     %}
     {% for page in pages %}
       {% if page.nav %}
-        <div class="nav-item{% if page.nav.dropdown %} has-dropdown{% endif %}">
-          <a
-            href="{{ page.dir | relative_url | uri_escape }}"
-            data-tooltip="{{ page.nav.tooltip | xml_escape }}"
-            class="nav-link"
-          >
-            {{ page.title }}
-            {% if page.nav.dropdown %}
-              <i class="fas fa-chevron-down dropdown-icon"></i>
-            {% endif %}
-          </a>
-          
-          <!-- 下拉菜单（如果有的话） -->
-          {% if page.nav.dropdown %}
-            <div class="dropdown-menu">
-              {% for item in page.nav.dropdown %}
-                <a href="{{ item.url | relative_url | uri_escape }}" class="dropdown-link">
-                  {{ item.title }}
-                </a>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
+        <a
+          href="{{ page.dir | relative_url | uri_escape }}"
+          data-tooltip="{{ page.nav.tooltip | xml_escape }}"
+        >
+          {{ page.title }}
+        </a>
       {% endif %}
     {% endfor %}
   </nav>
